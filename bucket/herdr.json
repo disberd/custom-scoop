@@ -1,12 +1,12 @@
 {
-  "version": "2026.10.15.081346",
-  "description": "herdr fork build win-rio-paste-fix-3b549bd4",
+  "version": "2026.10.15.093215",
+  "description": "herdr fork build win-rio-paste-fix-0.9.5-88498473",
   "homepage": "https://github.com/disberd/herdr",
   "license": "Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/disberd/herdr/releases/download/win-rio-paste-fix-3b549bd4/herdr-windows-x86_64.zip",
-      "hash": "49ca4a106dd9fc4c1eb4c8fc5b8c214067d8f4de586a2b6cd345ccfed05eaf3c"
+      "url": "https://github.com/disberd/herdr/releases/download/win-rio-paste-fix-0.9.5-88498473/herdr-windows-x86_64.zip",
+      "hash": "c3a9146c880a6b15e2cb6426fb9490477a646ca650cf1edc2004bdb170329fc8"
     }
   },
   "bin": "herdr.exe"
