@@ -17,7 +17,7 @@ jobs:
       - name: Update manifest
         env:
           GH_TOKEN: ${{ github.token }}
-        run: ./update-manifest.sh
+        run: ./update-herdr.sh
 
       - name: Commit
         run: |
