@@ -1,4 +1,4 @@
-name: Update herdr manifest
+name: Update manifests
 
 on:
   schedule:
@@ -14,15 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
-      - name: Update manifest
+      - name: Update manifests
         env:
           GH_TOKEN: ${{ github.token }}
-        run: ./update-herdr.sh
+        run: ./update.sh
 
       - name: Commit
         run: |
-          git diff --quiet && exit 0
+          git add bucket
+          git diff --cached --quiet && exit 0
+          msg=$(for f in $(git diff --cached --name-only -- bucket); do
+            echo "$(basename "$f" .json): $(jq -r .version "$f")"
+          done | paste -sd ' ' -)
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git commit -am "herdr: $(jq -r .version bucket/herdr.json)"
+          git commit -m "$msg"
           git push
