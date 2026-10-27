@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "description": "Screenshots and files between a Windows Workstation and a Linux Remote over SSH",
+  "homepage": "https://github.com/disberd/ferry",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/disberd/ferry/releases/download/v0.0.1/ferry-windows-x86_64.exe#/ferry.exe",
+      "hash": "268609872cca00d08cd8c38f7bd60e2c3c38a6a20276ce5f15900a1d85a4a7a1"
+    }
+  },
+  "bin": "ferry.exe"
+}
